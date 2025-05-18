@@ -1,0 +1,12 @@
+produto,data,valor,categoria,cidade
+Camiseta,2023-01-10,59.90,Roupas,Sao Paulo
+Tenis,2023-01-11,120.00,Calcados,Rio de Janeiro
+Meia,2023-01-12,5.50,Roupas,Sao Paulo
+Calca,2023-01-13,80.00,Roupas,Belo Horizonte
+Smartphone,2023-01-14,850.00,Eletronicos,Rio de Janeiro
+Laptop,2023-01-15,,Eletronicos,Sao Paulo
+Chinelo,2023-01-16,35.00,Calcados,Salvador
+Meia,2023-01-17,5.50,Roupas,Sao Paulo
+Camiseta,,59.90,Roupas,Rio de Janeiro
+Calca,2023-01-18,80.00,Roupas,Belo Horizonte
+Tenis,2023-01-19,120.00,Calcados,Salvador
