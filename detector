@@ -1,0 +1,37 @@
+def detectar_emocao(frase):
+    palavras_alegria = {"feliz", "alegre", "contente", "animado", "maravilhoso", "ótimo"}
+    palavras_tristeza = {"triste", "deprimido", "desanimado", "infeliz", "chateado"}
+    palavras_raiva = {"raiva", "irritado", "furioso", "nervoso", "bravo"}
+    palavras_medo = {"medo", "assustado", "aterrorizado", "nervoso", "ansioso"}
+
+    contadores = {"alegria": 0, "tristeza": 0, "raiva": 0, "medo": 0}
+
+    frase = frase.lower().replace(",", "").replace(".", "")
+    palavras = frase.split()
+
+    for palavra in palavras:
+        if palavra in palavras_alegria:
+            contadores["alegria"] += 1
+        elif palavra in palavras_tristeza:
+            contadores["tristeza"] += 1
+        elif palavra in palavras_raiva:
+            contadores["raiva"] += 1
+        elif palavra in palavras_medo:
+            contadores["medo"] += 1
+
+    if all(valor == 0 for valor in contadores.values()):
+        print("🤔 Nenhuma emoção detectada.")
+    else:
+        emocao_predominante = max(contadores, key=contadores.get)
+        emojis = {
+            "alegria": "😊",
+            "tristeza": "😢",
+            "raiva": "😠",
+            "medo": "😨"
+        }
+        print(f"{emojis[emocao_predominante]} Emoção predominante: {emocao_predominante}")
+
+
+# Teste
+entrada = input("Digite uma frase para analisar a emoção: ")
+detectar_emocao(entrada)
